@@ -1,0 +1,6 @@
+static/app.js
+static/app.js.map
+.vscode
+_*
+package.json
+package-lock.json
