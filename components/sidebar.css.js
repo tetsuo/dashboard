@@ -1,7 +1,7 @@
 import sidebarListStyles from './sidebar-list.css'
 
 const styles = theme => ({
-  '& > div': {
+  '& > .MuiPaper-root': {
     width: 240,
     backgroundColor: '#f7f7f7',
     '.MuiContainer-root:first-of-type': {
