@@ -1,7 +1,5 @@
 import * as React from 'react'
-import { createHashHistory } from 'history'
-
-const history = createHashHistory()
+import history from 'history/hash'
 
 export const LocationCtx = React.createContext(null)
 
