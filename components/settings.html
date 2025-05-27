@@ -27,9 +27,11 @@
                     primary={label}
                     secondary={description}
                   />
-                  <mui:icon-button size="small" onclick={onClick}>
-                    <icons:link-off />
-                  </mui:icon-button>
+                  <tooltip title="Revoke" placement="left" arrow="#">
+                    <mui:icon-button size="small" onclick={onClick}>
+                      <icons:link-off />
+                    </mui:icon-button>
+                  </tooltip>
                 </mui:list-item>
                 <mui:divider component="li" />
               {/account.sessions}
