@@ -1,0 +1,12 @@
+<mui:dialog open={open} onclose={onClose} class="modal">
+  <mui:dialog-title>{title}</mui:dialog-title>
+  <mui:dialog-content>
+  <mui:dialog-content-text>{body}</mui:dialog-content-text>
+  </mui:dialog-content>
+  <mui:dialog-actions>
+    <mui:button onclick={onClose}>Cancel</mui:button>
+    <mui:button color={severity} variant="contained" onclick={onSubmit}>
+      Revoke
+    </mui:button>
+  </mui:dialog-actions>
+</mui:dialog>

@@ -18,6 +18,36 @@ const muiTheme = createTheme({
           fontWeight: 'bold',
           fontSize: '1rem',
           borderRadius: '24px',
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: 'none',
+          },
+        },
+      },
+    },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          borderRadius: '8px',
+        },
+      },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#f1f1f1',
+          marginBottom: '1.3rem',
+          borderBottom: '1px solid #ddd',
+        },
+      },
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: '.3rem 1rem 1.15rem 0',
+          '& .MuiButton-root:first-of-type': {
+            color: '#999',
+          },
         },
       },
     },
