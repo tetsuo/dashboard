@@ -1,0 +1,10 @@
+<mui:list>
+  {#items}
+    <mui:link href={href} underline="none" onclick={triggerClick}>
+      <mui:list-item-button selected={selected}>
+        <mui:list-item-icon>{icon}</mui:list-item-icon>
+        <mui:list-item-text primary={label} />
+      </mui:list-item-button>
+    </mui:link>
+  {/items}
+</mui:list>
