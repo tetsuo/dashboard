@@ -1,0 +1,8 @@
+github.com/evanw/esbuild v0.25.4 h1:k1bTSim+usBG27w7BfOCorhgx3tO+6bAfMj5pR+6SKg=
+github.com/evanw/esbuild v0.25.4/go.mod h1:D2vIQZqV/vIf/VRHtViaUtViZmG7o+kKmlBfVQuRi48=
+github.com/tetsuo/restache v0.2.0 h1:7YdPYROI1JJZczW6VbB1PD2k+9AHKdV9ExAKgta/4r4=
+github.com/tetsuo/restache v0.2.0/go.mod h1:0fbrjMobZwfZprL3Z1DQH/3Rk7jdLcSzJz8bjbJqTmc=
+golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d h1:1n1fc535VhN8SYtD4cDUyNlfpAF2ROMM9+11equK3hs=
+golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
+golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 h1:0A+M6Uqn+Eje4kHMK80dtF3JCXC4ykBgQG4Fe06QRhQ=
+golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
