@@ -1,64 +1,38 @@
-<mui:container sx={sx} max-width="md">
-  <mui:stack spacing="25px">
+<mui:container max-width="md">
+  <mui:stack pt="32px" spacing="25px">
 
     {?account}
-      <mui:box class="basic-info">
-        <link-list-card
-          title="Basic info"
-          description="Your username may be visible to other users."
-          items={account.basicInfo}
-        />
-      </mui:box>
-
-      <mui:box class="change-password">
-        <link-card
-          title="Change password"
-          description="Last changed 42 minutes ago"
-        />
-      </mui:box>
-
-      <mui:box class="sessions">
-        <mui:card>
-          <list-card-content primary="Active sessions" secondary="You're currently signed in to your account on these devices.">
-            <mui:list>
-              {#account.sessions}
-                <mui:list-item align-items="center">
-                  <mui:list-item-text
-                    primary={label}
-                    secondary={description}
-                  />
-                  <tooltip title="Revoke" placement="left" arrow="#">
-                    <mui:icon-button size="small" onclick={onClick}>
-                      <icons:link-off />
-                    </mui:icon-button>
-                  </tooltip>
-                </mui:list-item>
-                <mui:divider component="li" />
-              {/account.sessions}
-            </mui:list>
-          </list-card-content>
-        </mui:card>
-      </mui:box>
+      <card:summary
+        title="Basic info"
+        description="Your username may be visible to other users."
+        info-items={account.basicInfo}
+        class="info-card"
+      />
+      <card:action
+        title="Change password"
+        description="Last changed 42 minutes ago"
+      />
+      <card:summary
+        title="Active sessions"
+        description="You're currently signed in to your account on these devices."
+        action-items={account.sessions}
+      />
     {/account}
 
     {?notifications}
-      <mui:box class="notifications">
-        <switch-list-card
-          title="Product updates"
-          description="See and learn more about the latest updates, features, and bug fixes in Demo app."
-          items={notifications}
-        />
-      </mui:box>
+      <card:summary
+        title="Product updates"
+        description="See and learn more about the latest updates, features, and bug fixes in Demo app."
+        checklist={notifications}
+      />
     {/notifications}
 
     {?privacy}
-      <mui:box class="delete-account">
-        <link-card
-          title="Delete account"
-          description="Permanently delete your account and data."
-          class="danger"
-        />
-      </mui:box>
+      <card:action
+        title="Delete account"
+        description="Permanently delete your account and data."
+        class="danger"
+      />
     {/privacy}
 
   </mui:stack>
