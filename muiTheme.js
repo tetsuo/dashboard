@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles'
 
-const muiTheme = createTheme({
+const theme = createTheme({
   typography: {
     htmlFontSize: 16,
     fontSize: 14,
@@ -180,9 +180,6 @@ const muiTheme = createTheme({
       },
     },
     MuiTooltip: {
-      defaultProps: {
-        arrow: true,
-      },
       styleOverrides: {
         tooltip: {
           color: '#fff',
@@ -205,4 +202,4 @@ const muiTheme = createTheme({
   },
 })
 
-export default muiTheme
+export default theme
