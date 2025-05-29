@@ -1,14 +1,14 @@
-<mui:drawer variant="permanent" sx={sx}>
+<mui:drawer variant="permanent">
   <mui:container>
     <mui:toolbar>
       <mui:icon-button onclick={onToggle}>
         <icons:menu />
       </mui:icon-button>
     </mui:toolbar>
-    <sidebar-list items={topNav.items} />
+    <list:nav-items items={topNav.items} />
   </mui:container>
   <mui:divider />
   <mui:container>
-    <sidebar-list items={bottomNav.items} />
+    <list:nav-items items={bottomNav.items} />
   </mui:container>
 </mui:drawer>
