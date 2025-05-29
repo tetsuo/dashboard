@@ -33,6 +33,7 @@ func Build(cfg Config) error {
 			"@mui/material",
 			"@mui/icons-material",
 			"history",
+			"date-fns",
 		},
 	}
 	if cfg.Minify {
