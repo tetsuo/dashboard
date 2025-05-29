@@ -8,17 +8,23 @@ const longH = 7
 const intervalDuration = 30 // in minutes
 
 export default function TimeRuler({ startDate, endDate, className }) {
+  if (!(startDate instanceof Date)) {
+    startDate = new Date(startDate)
+  }
+  if (!(endDate instanceof Date)) {
+    endDate = new Date(endDate)
+  }
+
   const start = alignUp(startDate, intervalDuration)
   const end = alignDown(endDate, intervalDuration)
 
   const ticks = []
   const hourTicks = []
 
-  for (let t = new Date(start), i = 0; t <= end; t = addMinutes(t, intervalDuration), i++) {
-    const current = new Date(t)
-    ticks.push(current)
-    if (getMinutes(current) === 0) {
-      hourTicks.push({ date: current, idx: i })
+  for (let t = start, i = 0; t <= end; t = addMinutes(t, intervalDuration), i++) {
+    ticks.push(t)
+    if (getMinutes(t) === 0) {
+      hourTicks.push({ date: t, idx: i })
     }
   }
 
@@ -93,8 +99,7 @@ export default function TimeRuler({ startDate, endDate, className }) {
   )
 }
 
-function alignUp(date, offset = 30) {
-  const d = new Date(date)
+function alignUp(d, offset = 30) {
   const m = d.getMinutes()
   const delta = m === 0 ? 0 : m < offset ? offset - m : offset * 2 - m
   const out = addMinutes(d, delta)
@@ -102,8 +107,7 @@ function alignUp(date, offset = 30) {
   return out
 }
 
-function alignDown(date, offset = 30) {
-  const d = new Date(date)
+function alignDown(d, offset = 30) {
   const m = d.getMinutes()
   const delta = m >= offset ? -(m - offset) : -m
   const out = addMinutes(d, delta)
