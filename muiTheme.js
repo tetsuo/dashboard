@@ -188,6 +188,55 @@ const theme = createTheme({
         },
       },
     },
+    MuiTable: {
+      styleOverrides: {
+        root: {
+          variants: [
+            {
+              props: { variant: 'matrix' },
+              style: {
+                width: 'calc(100% - 1px)',
+                '> .MuiTableHead-root': {
+                  position: 'sticky',
+                  top: 0,
+                  zIndex: 2,
+                  background: '#fff',
+                },
+                '> .MuiTableBody-root': {
+                  border: '1px solid #ddd',
+                  '.MuiTableRow-root:last-child': {
+                    '.MuiTableCell-root': {
+                      borderBottom: 0,
+                    },
+                  },
+                  '.MuiTableRow-root:hover': {
+                    backgroundColor: '#f5f5f5',
+                  },
+                  '.MuiTableCell-root': {
+                    borderLeft: '1px solid #ddd',
+                    padding: '16px',
+                    paddingBottom: '12px',
+                  },
+                  '.MuiTableCell-root:hover': {
+                    backgroundColor: '#f0f0f0',
+                  },
+                  'th:first-of-type': {
+                    borderLeft: 'none',
+                    width: '0px',
+                    padding: '5px',
+                    '> .MuiAvatar-root': {
+                      color: '#aaa',
+                      backgroundColor: 'transparent',
+                      fontSize: '12px',
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      },
+    },
   },
   palette: {
     background: {

@@ -1,0 +1,26 @@
+<mui:box sx={sx} ref={ref} height="100vh" display="flex" flex-direction="column">
+  <timeline:paginator
+    prev-disabled={prevDisabled}
+    next-disabled={nextDisabled}
+    prev-label={prevLabel}
+    next-label={nextLabel}
+    />
+  <mui:box>
+    <timeline:time-ruler start-date={rulerStart} end-date={rulerEnd} />
+    <!-- placeholder for the chart view -->
+    <mui:box
+      bgcolor="#fbfbfb"
+      width="100%"
+      height="82px"
+      border-top="1px solid #dadada"
+      border-bottom="1px solid #dadada"
+      />
+  </mui:box>
+  <mui:table-container>
+    <table:matrix
+      headers={table.headers}
+      rows={table.rows}
+      sticky-header="#"
+      />
+  </mui:table-container>
+</mui:box>
