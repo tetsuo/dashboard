@@ -239,6 +239,17 @@ const theme = createTheme({
     },
     MuiDrawer: {
       styleOverrides: {
+        root: {
+          flexShrink: 0,
+          overflowX: 'hidden',
+          width: 240,
+          '&.compact': {
+            width: 72,
+            '> div': {
+              width: 72,
+            },
+          },
+        },
         paper: ({ theme }) => ({
           width: 240,
           backgroundColor: '#f7f7f7',
