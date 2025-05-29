@@ -283,6 +283,26 @@ const theme = createTheme({
         }),
       },
     },
+    MuiBackdrop: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          variants: [
+            {
+              props: { variant: 'fullscreen' },
+              style: {
+                zIndex: theme.zIndex.drawer + 1,
+                backgroundColor: 'rgba(255, 255, 255, 0.62)',
+                '.MuiLinearProgress-root': {
+                  position: 'absolute',
+                  top: 0,
+                  width: '100%',
+                },
+              },
+            },
+          ],
+        }),
+      },
+    },
   },
   palette: {
     background: {
