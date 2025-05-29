@@ -46,7 +46,7 @@ const theme = createTheme({
         root: {
           padding: '.3rem 1rem 1.15rem 0',
           '.MuiButton-root:first-of-type': {
-            color: '#999',
+            color: '#555',
           },
         },
       },
