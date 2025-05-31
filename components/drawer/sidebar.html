@@ -1,14 +1,14 @@
-<mui:drawer variant="permanent" class={className}>
+<mui:drawer variant="permanent" class={className} role="navigation" aria-label="Site navigation">
   <mui:container>
     <mui:toolbar>
-      <mui:icon-button onclick={onToggle}>
+      <mui:icon-button onclick={onToggle} aria-label="Open navigation menu">
         <icons:menu />
       </mui:icon-button>
     </mui:toolbar>
-    <list:nav-items items={primary.items} />
+    <list:nav-items items={primary.items} aria-label="Primary navigation" />
   </mui:container>
   <mui:divider />
   <mui:container>
-    <list:nav-items items={secondary.items} />
+    <list:nav-items items={secondary.items} aria-label="Secondary navigation" />
   </mui:container>
 </mui:drawer>

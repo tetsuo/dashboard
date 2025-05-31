@@ -41,7 +41,6 @@ export default function TimeRuler({ startDate, endDate, className }) {
         position: 'relative',
         width: '100%',
         height: longH + 18,
-        minWidth: 460,
       }}
     >
       <div
