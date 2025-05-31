@@ -2,6 +2,7 @@
   <mui:stack pt="32px" spacing="25px">
 
     {?account}
+      <title>Account info</title>
       <card:summary
         title="Basic info"
         description="Your username may be visible to other users."
@@ -20,6 +21,7 @@
     {/account}
 
     {?notifications}
+      <title>Notifications</title>
       <card:summary
         title="Product updates"
         description="See and learn more about the latest updates, features, and bug fixes in Demo app."
@@ -28,6 +30,7 @@
     {/notifications}
 
     {?privacy}
+      <title>Privacy</title>
       <card:action
         title="Delete account"
         description="Permanently delete your account and data."
