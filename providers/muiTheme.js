@@ -193,7 +193,7 @@ const theme = createTheme({
         root: {
           variants: [
             {
-              props: { variant: 'matrix' },
+              props: { variant: 'crosstab' },
               style: {
                 width: 'calc(100% - 1px)',
                 '> .MuiTableHead-root': {
