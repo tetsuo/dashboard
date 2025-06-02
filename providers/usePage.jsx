@@ -30,7 +30,7 @@ export default function usePage() {
 
     const pathname = pendingRoute.path === '/' ? '/timeline' : pendingRoute.path
 
-    fetch(`/mockapi${pathname}.json`, { signal: aborter.signal })
+    fetch(`mockapi${pathname}.json`, { signal: aborter.signal })
       .then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`)
         return r.json()
