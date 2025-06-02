@@ -8,5 +8,5 @@ export default function SidebarWrapper(props) {
     evt.preventDefault()
     setLayout(prev => (prev === Layout.Compact ? Layout.Expanded : Layout.Compact))
   }
-  return <Sidebar onToggle={onToggle} className={layout} {...props} />
+  return <Sidebar onToggle={onToggle} className={layout.description} {...props} />
 }

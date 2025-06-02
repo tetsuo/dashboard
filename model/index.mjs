@@ -49,15 +49,15 @@ export const NavVariant = (flat, accordion, multi) => ({
 export const MultiNav = variants => ({ variants })
 
 export const Layout = {
-  Compact: 'compact',
-  Expanded: 'expanded',
+  Compact: Symbol('compact'),
+  Expanded: Symbol('expanded'),
 }
 
 export const Status = {
-  Idle: 'idle',
-  Pending: 'pending',
-  Ready: 'ready',
-  Error: 'error',
+  Idle: Symbol('idle'),
+  Pending: Symbol('pending'),
+  Ready: Symbol('ready'),
+  Error: Symbol('error'),
 }
 
 export const Page = (route, title, navVariant, layout, status) => ({
