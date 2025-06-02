@@ -1,10 +1,7 @@
 <title>Home</title>
 
 <mui:box sx={sx} ref={ref} height="100vh" display="flex" flex-direction="column" min-width="460px">
-  <timeline:pager
-    prev={pager.prev}
-    next={pager.next}
-    />
+  <timeline:pagination $={pagination} />
   <mui:box>
     <timeline:ruler start-date={ruler.start} end-date={ruler.end} />
     <!-- placeholder for the chart view -->
@@ -17,10 +14,6 @@
       />
   </mui:box>
   <mui:table-container>
-    <table:matrix
-      headers={table.headers}
-      rows={table.rows}
-      sticky-header="#"
-      />
+    <timeline:crosstab $={table} />
   </mui:table-container>
 </mui:box>
