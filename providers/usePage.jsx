@@ -96,9 +96,9 @@ export default function usePage() {
           account: {
             basicInfo: page.data.basicInfo,
             sessions: page.data.sessions.map(x => ({ ...x, onClick: showRevokeDialog })),
+            isRevokeDialogOpen: revokeDialogOpen,
+            closeDialog: closeRevokeDialog,
           },
-          isRevokeDialogOpen: revokeDialogOpen,
-          closeDialog: closeRevokeDialog,
         }
         break
       case Route.NotificationSettings.key:
