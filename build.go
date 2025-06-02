@@ -9,11 +9,11 @@ import (
 
 func Build(cfg Config) error {
 	options := api.BuildOptions{
-		EntryPoints:       []string{"index.jsx"},
+		EntryPoints:       []string{"index.html"},
 		Bundle:            true,
 		Write:             true,
 		Platform:          api.PlatformBrowser,
-		ResolveExtensions: []string{".html", ".jsx", ".js", ".mjs"},
+		ResolveExtensions: []string{".jsx", ".tsx", ".html", ".js", ".mjs", ".ts"},
 		Plugins: []api.Plugin{restache.Plugin(
 			restache.WithExtensionName(".html"),
 			restache.WithTagPrefixes(map[string]string{
@@ -34,6 +34,7 @@ func Build(cfg Config) error {
 			"@mui/icons-material",
 			"history",
 			"date-fns",
+			"date-fns-tz",
 		},
 	}
 	if cfg.Minify {
