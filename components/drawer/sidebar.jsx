@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Layout } from './model'
-import Sidebar from '../drawer/sidebar'
+import { Layout } from '../../model'
+import Sidebar from './sidebar.html'
 
-export default function AppSidebar(props) {
+export default function SidebarWrapper(props) {
   const [layout, setLayout] = React.useState(Layout.Expanded)
   const onToggle = evt => {
     evt.preventDefault()
