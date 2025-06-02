@@ -1,12 +1,10 @@
 <mui:box sx={sx} ref={ref} height="100vh" display="flex" flex-direction="column" min-width="460px">
-  <timeline:paginator
-    prev-disabled={prevDisabled}
-    next-disabled={nextDisabled}
-    prev-label={prevLabel}
-    next-label={nextLabel}
+  <timeline:pager
+    prev={pager.prev}
+    next={pager.next}
     />
   <mui:box>
-    <timeline:time-ruler start-date={rulerStart} end-date={rulerEnd} />
+    <timeline:ruler start-date={ruler.start} end-date={ruler.end} />
     <!-- placeholder for the chart view -->
     <mui:box
       bgcolor="#fbfbfb"

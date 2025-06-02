@@ -6,13 +6,13 @@
   align-items="center"
   justify-content="center">
 
-  <mui:icon-button href="#/" disabled={prevDisabled} aria-label="Go to prev page">
+  <mui:icon-button href="#/" disabled={prev.disabled} aria-label="Go to prev page">
     <icons:chevron-left-rounded />
   </mui:icon-button>
   <mui:typography font-size="1.2rem" white-space="nowrap">
-    {prevLabel} &mdash; {nextLabel}
+    {prev.label} &mdash; {next.label}
   </mui:typography>
-  <mui:icon-button href="#/" disabled={nextDisabled} aria-label="Go to next page">
+  <mui:icon-button href="#/" disabled={next.disabled} aria-label="Go to next page">
     <icons:chevron-right-rounded />
   </mui:icon-button>
 
