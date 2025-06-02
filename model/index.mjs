@@ -22,9 +22,11 @@ export const NavItem = (target, label, icon, routeActive) => {
       o.active = true
     }
     o.href = target.route.path
+    o.key = target.route.key.description
     o.triggerClick = triggerRouteClick
   } else {
     o.href = target.external.href
+    o.key = target.external.href
     o.triggerClick = () => void 0
   }
   return o

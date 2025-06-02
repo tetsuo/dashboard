@@ -247,6 +247,7 @@ const theme = createTheme({
             width: 72,
             '> div': {
               width: 72,
+              overflowX: 'hidden',
             },
           },
         },
@@ -289,6 +290,18 @@ const theme = createTheme({
             },
             '.MuiListItemButton-root': {
               paddingLeft: theme.spacing(3),
+              paddingTop: 12,
+              paddingBottom: 12,
+              '> .MuiListItemText-root': {
+                margin: 0,
+              },
+            },
+            '.MuiListItem-root': {
+              padding: 0,
+              width: '100%',
+              '> .MuiLink-root': {
+                width: '100%',
+              },
             },
           },
         }),
