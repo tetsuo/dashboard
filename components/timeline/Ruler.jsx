@@ -7,7 +7,7 @@ const shortH = 4
 const longH = 7
 const intervalDuration = 30 // in minutes
 
-export default function TimeRuler({ startDate, endDate, className }) {
+export default function TimeRuler({ startDate, endDate }) {
   if (!(startDate instanceof Date)) {
     startDate = new Date(startDate)
   }
@@ -36,7 +36,6 @@ export default function TimeRuler({ startDate, endDate, className }) {
 
   return (
     <div
-      className={className}
       style={{
         position: 'relative',
         width: '100%',
