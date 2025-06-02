@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import LocationProvider from './Location'
 import theme from './muiTheme'
 
-export default function RootProvider({ children }) {
+export default function Root({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

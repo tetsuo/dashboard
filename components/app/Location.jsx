@@ -3,24 +3,6 @@ import history from 'history/hash'
 
 export const LocationCtx = React.createContext(null)
 
-export function linkHandler(event) {
-  event.preventDefault()
-
-  const href = event.currentTarget.getAttribute('href')
-  if (!href) {
-    return
-  }
-
-  const url = new URL(href, window.location.origin)
-  const path = url.pathname
-
-  if (path !== history.location.pathname) {
-    history.push(path)
-  } else {
-    history.replace(path)
-  }
-}
-
 export default function LocationProvider({ children }) {
   const [loc, setLoc] = React.useState(history.location) // { pathname, search, key }
 
