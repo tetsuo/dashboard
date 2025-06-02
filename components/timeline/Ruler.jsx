@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import addMinutes from 'date-fns/addMinutes'
 import getMinutes from 'date-fns/getMinutes'
 import getHours from 'date-fns/getHours'
