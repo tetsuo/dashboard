@@ -7,6 +7,20 @@ export const Home = f => FlatNav([NavItem.Home(f)])
 export const Settings = x =>
   FlatNav([NavItem.Home, NavItem.AccountSettings, NavItem.NotificationSettings, NavItem.PrivacySettings].map(f => f(x)))
 
+// TODO: fix recursive components
+// export const Settings = x =>
+//   MultiNav([
+//     NavVariant(FlatNav([NavItem.Home()])),
+//     NavVariant(
+//       undefined,
+//       AccordionNav(
+//         'Settings',
+//         'Update account settings',
+//         [NavItem.AccountSettings, NavItem.NotificationSettings, NavItem.PrivacySettings].map(f => f(x)),
+//       ),
+//     ),
+//   ])
+
 export const NotificationSettings = Settings
 
 export const PrivacySettings = Settings

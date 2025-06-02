@@ -22,7 +22,7 @@ export const NavItem = (target, label, icon, routeActive) => {
       o.active = true
     }
     o.href = target.route.path
-    o.triggerClick = linkHandler
+    o.triggerClick = triggerRouteClick
   } else {
     o.href = target.external.href
     o.triggerClick = () => void 0
@@ -68,7 +68,7 @@ export const Page = (route, title, navVariant, layout, status) => ({
   status: status || Status.Idle,
 })
 
-function linkHandler(event) {
+function triggerRouteClick(event) {
   event.preventDefault()
 
   const href = event.currentTarget.getAttribute('href')
