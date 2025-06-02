@@ -7,17 +7,23 @@
         title="Basic info"
         description="Your username may be visible to other users."
         info-items={account.basicInfo}
-        class="info-card"
-      />
+        class="info-card" />
       <card:action
         title="Change password"
-        description="Last changed 42 minutes ago"
-      />
+        description="Last changed 42 minutes ago" />
       <card:summary
         title="Active sessions"
         description="You're currently signed in to your account on these devices."
-        action-items={account.sessions}
-      />
+        action-items={account.sessions} />
+      <dialog:confirm
+        severity="warning"
+        open={account.isRevokeDialogOpen}
+        title="Revoke session"
+        submit-label="Revoke"
+        submit-variant="contained"
+        body="Are you sure you want to revoke this session?"
+        onclose={account.closeDialog}
+        onsubmit={account.closeDialog} />
     {/account}
 
     {?notifications}
@@ -25,8 +31,7 @@
       <card:summary
         title="Product updates"
         description="See and learn more about the latest updates, features, and bug fixes in Demo app."
-        checklist={notifications}
-      />
+        checklist={notifications} />
     {/notifications}
 
     {?privacy}
@@ -40,14 +45,3 @@
 
   </mui:stack>
 </mui:container>
-
-<dialog:confirm
-  severity="warning"
-  open={isRevokeDialogOpen}
-  title="Revoke session"
-  submit-label="Revoke"
-  submit-variant="contained"
-  body="Are you sure you want to revoke this session?"
-  onclose={closeDialog}
-  onsubmit={closeDialog}
-/>
