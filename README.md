@@ -1,14 +1,12 @@
 # dashboard
 
-Barebones dashboard UI built with [**Restache**](https://github.com/tetsuo/restache).
+An experimental dashboard UI built with [restache](https://github.com/tetsuo/restache).
 
-#### Demo
-
-**[tetsuo.github.io/dashboard](https://tetsuo.github.io/dashboard)**
+👉 [**Live demo**](https://tetsuo.github.io/dashboard)
 
 ## Features
 
-- No JSX -- _almost_
+- No JSX (well, almost)
 - Material UI for components
 - Minimal router using history module
 - Per-page data loading using React hooks
