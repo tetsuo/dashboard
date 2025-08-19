@@ -4,6 +4,8 @@ An experimental dashboard UI built with [restache](https://github.com/tetsuo/res
 
 👉 [**Live demo**](https://tetsuo.github.io/dashboard)
 
+![dashboard Screenshot](./Screenshot.png)
+
 ## Features
 
 - No JSX (well, almost)
