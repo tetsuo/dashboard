@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const ESMSH_URL = 'https://esm.sh/'
-const CACHE_NAME = 'esm-sh-cache-18012026'
+const CACHE_NAME = 'esm-sh-cache-10022026'
 
 self.addEventListener('install', () => {
   self.skipWaiting()
